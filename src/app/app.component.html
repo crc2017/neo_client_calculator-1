@@ -1,0 +1,145 @@
+<div class="container-calculator box-shadow white-bg-color">
+  <div class="ca-row-container">
+      <div class="div-calculator">
+          <div class="col-sm-calculator">
+              <p class="titulo-calculator font-bold red-color">CALCULADORA</p>
+          </div>
+          <div class="col-sm-calculator">
+            <i class="arrowdown-2 fs-28 icon-window-aling"></i>
+          </div>
+          <div class="col-sm-calculator">
+              <p class="close-calculator font-bold red-color fs-28 cursor-pointer">x</p>
+          </div>
+      </div>
+      <div class="ca-number-display-container">
+          <p class="ca-number-display-text font-regular fs-24 gray-light-bg-color">{{displayText}}</p>
+      </div>
+      <div class="ca-numberpad-container noselect" (keyup)="onKeyUp($event)">
+          <div class="flex-row margin-left">
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer  hover-btn" (click)="onClick($event, BUTTONS.SEVEN)">
+                          <span class="ca-button-text fs-20 font-medium btn">7</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer  hover-btn" (click)="onClick($event, BUTTONS.EIGHT)">
+                          <span class="ca-button-text fs-20 font-medium btn">8</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer hover-btn" (click)="onClick($event, BUTTONS.NINE)">
+                          <span class="ca-button-text fs-20 font-medium btn">9</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer unary-operator btn-c" (click)="onClick($event, BUTTONS.AC)">
+                          <p class="ca-button-text font-medium btn-c fs-16">C</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="flex-row margin-left">
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer hover-btn" (click)="onClick($event, BUTTONS.FOUR)">
+                          <span class="ca-button-text fs-20 font-medium btn">4</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer  hover-btn" (click)="onClick($event, BUTTONS.FIVE)">
+                          <span class="ca-button-text fs-20 font-medium btn">5</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer hover-btn" (click)="onClick($event, BUTTONS.SIX)">
+                          <span class="ca-button-text fs-20 font-medium btn">6</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer btn-divisor" (click)="onClick($event, BUTTONS.DIVIDE)">
+                          <p class="ca-button-text btn-divisor font-medium fs-16">/</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="flex-row margin-left">
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer hover-btn" (click)="onClick($event, BUTTONS.ONE)">
+                          <span class="ca-button-text fs-20 font-medium btn">1</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer hover-btn" (click)="onClick($event, BUTTONS.TWO)">
+                          <span class="ca-button-text fs-20 font-medium btn">2</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer  hover-btn" (click)="onClick($event, BUTTONS.THREE)">
+                          <span class="ca-button-text fs-20 font-medium btn">3</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer btn-x" (click)="onClick($event, BUTTONS.MULTIPLY)">
+                          <p class="ca-button-text  btn-x font-medium fs-16">x</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="flex-row margin-left">
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer hover-btn" (click)="onClick($event, BUTTONS.PERIOD)">
+                          <span class="ca-button-text fs-20 font-medium btn">.</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer  hover-btn" (click)="onClick($event, BUTTONS.ZERO)">
+                          <span class="ca-button-text fs-20 font-medium btn">0</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer hover-btn" (click)="onClick($event, BUTTONS.EQUAL)">
+                          <span class="ca-button-text fs-20 font-medium btn">=</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-btn">
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer btn-resta" (click)="onClick($event, BUTTONS.SUBTRACT)">
+                          <p class="ca-button-text btn-resta font-medium fs-16">-</p>
+                      </div>
+                  </div>
+                  <div class="ca-item-container">
+                      <div class="ca-button cursor-pointer btn-suma" (click)="onClick($event, BUTTONS.ADDITION)">
+                          <p class="ca-button-text btn-suma font-medium fs-16">+</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div><!--fin de contenedor de numeros-->
+  </div>
+</div>
